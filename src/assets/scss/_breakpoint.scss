@@ -1,0 +1,53 @@
+/* Scss Document */
+@import "./mixins/breakpoint";
+// Small devices
+@mixin sm {
+   @media (min-width: #{$screen-sm-min}) {
+       @content;
+   }
+}
+@mixin sm-re {
+    @media (min-width: #{$screen-sm-re}) {
+        @content;
+    }
+ }
+ 
+// Medium devices
+// Medium devices
+@mixin md-s {
+    @media (min-width: #{$screen-md-s-min}) {
+        @content;
+    }
+ }
+
+@mixin md {
+   @media (min-width: #{$screen-md-min}) {
+       @content;
+   }
+   
+}
+@mixin md-max {
+    @media (max-width: #{$screen-md-min}) {
+        @content;
+    }
+    
+ }
+// Large devices
+@mixin lg {
+   @media (min-width: #{$screen-lg-min}) {
+       @content;
+   }
+}
+
+// Extra large devices
+@mixin xl {
+   @media (min-width: #{$screen-xl-min}) {
+       @content;
+   }
+}
+// Custom devices
+@mixin rwd($screen) {
+   @media (min-width: $screen+'px') {
+       @content;
+   }
+}

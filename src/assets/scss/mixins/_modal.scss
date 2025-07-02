@@ -1,0 +1,48 @@
+// Small tablets and large smartphones (landscape view)
+$zindex-modal: 10000;
+
+// Small tablets (portrait view)
+$modal-dialog-margin: 1rem auto;
+
+$modal-header-padding:0.6rem 0.3rem 0.4rem 1.3rem;
+
+$modal-header-padding-custom:0.3rem 0.1rem 0.2rem 1rem;
+
+$modal-header-border-width:1px;
+
+$modal-header-border-color:#e9ecef;
+
+$modal-content-inner-left-border-radius:calc(0.3rem - 1px);
+
+$modal-content-inner-right-border-radius:calc(0.3rem - 1px);
+
+$modal-content-box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+
+$modal-content-border: 1px solid rgba(0, 0, 0, 0.2);
+
+$modal-header-close-margin:0 0.3em;
+
+$modal-title-line-height: 48px;
+
+$modal-title-margin:0;
+
+$modal-header-title-aimcons:2.5;
+
+$modal-header-title-margin-right:10px;
+
+$modal-inner-padding:1rem;
+
+
+$modal-footer-border-color:#e9ecef;
+
+$modal-footer-inner-left-border-radius:calc(0.3rem - 1px);
+
+$modal-footer-inner-right-border-radius:calc(0.3rem - 1px);
+
+//$modal-sm:300px;
+
+//$modal-md:600px;
+
+$modal-lg:900px;
+
+$modal-xl:1080px;

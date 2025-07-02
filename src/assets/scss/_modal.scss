@@ -1,0 +1,368 @@
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and stuff
+
+/* Scss Document */
+@import "./mixins/modal";
+@import "./mixins/font-style";
+
+.modal-open {
+  // Kill the scroll on the body
+  overflow: hidden;
+
+  .modal {
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+.modal-mask {
+	z-index: 200000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: opacity 0.3s ease;
+}
+.modal-mask.right {
+  left: auto;
+}
+.modal-mask-none {
+	z-index: 997;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+	display: table;
+  .modal-dialog-top{
+
+    box-shadow: $modal-content-box-shadow;
+  }
+}
+.modal-mask-none.right {
+  left: auto;
+}
+// Container that the modal scrolls within
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+}
+
+// Shell div to position the modal with bottom padding
+.modal-dialog {
+  position: relative;
+  width: fit-content;
+  pointer-events: none;
+  max-width: 95%;
+  margin: 1.75rem auto;
+ 
+
+}
+.modal-dialog.right{
+  right: 0;
+  max-width:100% !important;
+  position: absolute;
+}
+.modal-dialog-centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: calc(100% - (0.5rem * 2));
+}
+
+// Actual modal
+.modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  /*background-color: #fff;*/
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 0.3rem;
+  outline: 0;
+  max-height: calc(100vh - 100px) !important;
+
+}
+
+// Actual Drag modal
+.modal-content-drag {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 0.3rem;
+  outline: 0;
+  // max-height: calc(100vh - 100px) !important;
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+  display: flex;
+  align-items: flex-start; // so the close btn always stays on the upper right corner
+  justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
+  border-bottom: $modal-header-border-width solid $modal-header-border-color;
+  border-top-left-radius: $modal-content-inner-left-border-radius;
+  border-top-right-radius: $modal-content-inner-right-border-radius;
+  padding: 0;
+  line-height: 36px;
+ // @include border-top-radius($modal-content-inner-border-radius);
+  button.close{
+    padding: 0px 10px;
+    color: $white;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  button.close,button.close-01 {
+    padding: 0px 10px;
+    color: $dark;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .close,.close-01 {
+    margin: $modal-header-close-margin auto; 
+    // opacity:1;
+    line-height:inherit;
+    font-size:.8rem;
+    font-weight: $font-weight-light;
+    // border-radius: 10px;
+  }
+
+  .close {
+    // auto on the left force icon to the right even when there is no .modal-title
+    color: $white!important;
+  }
+  .close-01 {
+    // auto on the left force icon to the right even when there is no .modal-title
+    color: $dark;
+  }
+
+  .close-01:hover {
+    color:$dark !important;
+    text-decoration: none;
+    background-color: rgba($black, .1) ;
+  }
+
+  .close:hover {
+    color: $white;
+    text-decoration: none;
+    background-color: rgba($black, .1) ;
+  }
+  .close:not(:disabled):not(.disabled):hover,
+  .close-01:not(:disabled):not(.disabled):hover, 
+  .close:not(:disabled):not(.disabled):focus 
+  .close-01:not(:disabled):not(.disabled):focus {
+    opacity: .75;
+  }
+  
+  .close.disabled, .close-01.disabled{
+    pointer-events: none;
+  }
+
+}
+
+
+// Title text within header
+.modal-title {
+  margin: $modal-title-margin;
+  line-height:inherit;
+  padding-left:12px;
+  color: #fff;
+}
+
+.modal-title >i{
+  margin: $modal-title-margin;
+	margin-right:$modal-header-title-margin-right;
+  vertical-align: baseline;
+  padding: .1rem .28rem;
+  border-radius: 2rem;
+}
+
+
+
+.modal-title >h5{
+  margin: $modal-title-margin;
+  line-height: $modal-header-title-aimcons;
+	margin-right:$modal-header-title-margin-right;
+}
+
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+  position: relative;
+  // Enable `flex-grow: 1` so that the body take up as much space as possible
+  // when there should be a fixed height on `.modal-dialog`.
+  flex: 1 1 auto;
+  padding: $modal-inner-padding;
+  /*overflow:auto;*//*dylee*/
+  background: #fff;
+}
+.modal-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 10px;
+  border-top: 1px solid #e9ecef;
+  border-bottom-right-radius: calc(0.3rem - 1px);
+  border-bottom-left-radius: calc(0.3rem - 1px);
+  background-color: rgb(248, 248, 248);
+}
+
+.alert-result{
+  width:100%;
+  background:$gray-200;
+  overflow:auto;
+  height: 400px;
+}
+
+
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+.modal-enter {
+	opacity: 0;
+}
+
+.modal-leave-active {
+	opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+@include sm {
+  .modal-sm {
+    width: 300px;
+    left: calc(50% - 150px);
+  }
+  .alert-sm{
+    max-width: calc($alert-width/2);
+    top: calc(50vh - 125px);
+    min-width: calc($alert-width/2);
+    left: calc(50% - 150px);
+  }
+  .alert-content-sm {
+    margin: 0;
+    width: auto;
+  }
+}
+@include md-s {
+  .modal-md {
+    width: 500px;
+    left: calc(50% - 250px) ;
+  }
+}
+@include md {
+  .modal-md {
+    width: 600px;
+    left: calc(50% - 300px);
+  }
+  .alert-md{
+    max-width: $alert-width;
+    top: calc(50vh - 125px);
+    min-width: $alert-width;
+    left: calc(50% - 300px);
+  }
+  .alert-content-md {
+   margin: 0;
+   width: auto;
+  }
+  .modal-dialog-scrollable {
+    max-height: calc(100% - 3.5rem);
+  }
+  .modal-dialog-scrollable .modal-content {
+    max-height: calc(100vh - 3.5rem);
+  }
+  .modal-dialog-centered {
+    min-height: calc(100% - 3.5rem);
+  }
+  .modal-dialog-centered::before {
+    height: calc(100vh - 3.5rem);
+  }
+}
+
+@include lg {
+  .modal-lg {
+    width: 900px;
+    left: calc(50% - 450px);
+  }
+  .alert-lg {
+    max-width: $alert-width;
+    top: calc(50vh - 125px);
+    min-width: $alert-width;
+    left: calc(50% - 300px);
+}
+  .alert-content-lg {
+    margin:0;
+    width: auto;
+  }
+  
+}
+
+@include xl {
+  .modal-xl {
+    width: 1000px;
+    left: calc(50% - 500px);
+  }
+  .alert-xl{
+    max-width: $alert-width;
+    top: calc(50vh - 125px);
+    min-width:$alert-width;
+    left: calc(50% - 300px);
+  }
+
+  .alert-content-xl {
+    margin: 0;
+    width: auto;
+  }
+}

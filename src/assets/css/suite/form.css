@@ -1,0 +1,375 @@
+/*
+    [ 목차 ]
+    1. Accordion
+    2. Spinner
+    3. Grid
+    4. FormGrid
+    5. Create|Modify
+    6. SearchCondition
+    7. Tree
+*/
+
+/* #region Accordion */
+.required .e-float-text.e-label-top::after {
+    padding-left: 3px;
+}
+
+.required .e-float-text::after {
+    position: relative;
+    content: "\ea07";
+    font-family: aimcons;
+    color: #fd7e14;
+    padding-left: 4px;
+    font-size: 12px;
+}
+
+.required .e-float-text.e-label-top::after {
+    padding-left: 3px;
+}
+
+.required .e-disabled .e-float-text.e-label-top::after {
+    background: none;
+    -webkit-text-fill-color: #fd7e14 !important;
+}
+
+/* #endregion */
+
+.required .e-disabled .e-float-text.e-label-top::after {
+    background: none;
+    -webkit-text-fill-color: #fd7e14 !important;
+}
+
+/* #endregion */
+
+/* #region Grid */
+/* Grid */
+.grid-form {
+    position: static;
+}
+
+.e-grid .e-gridcontent {
+    height: calc(100vh - 276px);
+}
+
+.e-grid .e-gridcontent .e-content {
+    height: 100% !important;
+}
+
+
+/* Grid Row */
+.e-grid .e-spinner-pane.e-spin-show {
+    display: none !important;
+}
+
+
+
+/* Frozen Column */
+.e-grid .e-movablescrollbar {
+    transform: translateY(-8px);
+    overflow-x: auto !important;
+    max-height: 8px !important;
+}
+
+.e-grid .e-movablecontent {
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: auto;
+}
+
+.e-grid .e-content {
+    display: block !important;
+}
+
+.e-grid .e-rhelper {
+    display: none;
+}
+
+.e-reorderdownarrow,
+.e-reorderuparrow {
+    display: none;
+}
+
+.e-frozenscrollbar.e-frozen-left-scrollbar {
+    display: inline-block !important;
+}
+
+/* Drag and Drop */
+.e-draganddrop.e-grid {
+    max-height: 30px !important;
+}
+
+table.dragging {
+    border-bottom: 2.5px #634df5 solid !important;
+}
+
+.dragging-row {
+    background: #e6e6fa;
+}
+
+.cross-draggable .e-selectionbackground {
+    cursor: move;
+}
+
+/* Excel Button*/
+.excel-box {
+    display: inline-block;
+}
+
+.excel-box .btn-group button {
+    color: #4d4d4d;
+}
+
+#gridImportFile {
+    display: none;
+    position: relative;
+}
+
+/* Empty Row */
+.e-emptyrow {
+    animation: fadeIn 0.1s linear forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* #endregion */
+
+/* #region FormGrid */
+.e-row.new-row {
+    background: #bfedc7;
+}
+
+/* Image */
+.e-rowcell img {
+    height: 22px !important;
+    width: 22px !important;
+    border-radius: 50% !important;
+    background-color: #eff0f997;
+    transform: translate(-4px, 0px);
+}
+
+/* Cell Hover - columnTemplate */
+.custom-cell-hover:hover {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.e-pane-vertical.e-scrollable.e-resizable .grid-form {
+    height: 100%;
+}
+
+/* #endregion */
+
+/* #region Create|Modify */
+/* Common */
+
+
+.suite-form .item-title span {
+    cursor: pointer;
+    white-space: nowrap !important;
+}
+
+.suite-form .item-title span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Modify - Checkbox */
+.d-table-cell.checkbox {
+    padding: 0px !important;
+    transform: translate(-2px, -5px);
+}
+
+.modify-form .item-field {
+    position: relative;
+    margin-left: 2px;
+    opacity: 0.9;
+}
+
+.modify-form .item-field .check-template .e-frame+.e-label {
+    margin-left: 6px !important;
+}
+
+.modify-form .input-field-box .e-input-group {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+/* Modify Field */
+.modify-field {
+    padding-right: 14px !important;
+}
+
+.modify-field span {
+    font-weight: 500;
+    color: #f96103 !important;
+}
+
+.modify-field i {
+    margin: 0px 5px;
+    transform: translateY(1px);
+    color: black !important;
+}
+
+/* #endregion */
+
+
+/* #region SearchCondition */
+.search-items {
+    display: inline-block;
+    width: 100%;
+    min-height: 39px;
+    background-color: white;
+    padding-left: 10px;
+    border-radius: 20px;
+    box-shadow: 0 1px 6px 0 #20212447;
+}
+
+.search-items>div {
+    display: inline-block;
+}
+
+.search-item>div {
+    display: flex;
+}
+
+
+.search-item {
+    color: #6e88ef;
+    border: 2px solid #6e88ef;
+    background-color: #edf0ff;
+    border-radius: 10px;
+    padding: 2px 23px 2px 10px;
+    margin: 5px 5px 5px 0px;
+}
+
+.search-box-btn-area {
+    float: right;
+    margin-left: 10px;
+    position: absolute;
+    top: calc(100% - 37px);
+    left: calc(100% - 115px);
+}
+
+.search-box-btn-area>button {
+    margin-left: 0 !important;
+    border: none !important;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+}
+
+.search-btn-close::before {
+    font-family: "aimcons";
+    font-size: 0.5rem;
+    content: "\ea11";
+    color: #6e88ef;
+    position: absolute;
+    top: calc(50% - 7px);
+    margin-left: 6px;
+}
+
+.search-btn-close:hover {
+    cursor: pointer;
+}
+
+/* #endregion */
+
+/* #region Tree */
+
+/* Search */
+.tree-input {
+    display: inline-block;
+    width: calc(100% - 80px);
+    margin-left: 3px !important;
+}
+
+:deep(.e-input-group .e-search-icon) {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+}
+
+:deep(.e-input-group.e-input-focus .e-clear-icon) {
+    position: absolute;
+    top: 3.5px;
+    right: 20px;
+}
+
+/* Button */
+.tree-btn-box {
+    width: 77px;
+    padding-left: 20px;
+}
+
+.tree-btn-box button {
+    position: absolute;
+    background: none !important;
+    border: none !important;
+    color: #00000086 !important;
+    transform: translate(16px, 3px);
+    font-size: 14px;
+}
+
+.tree-btn-box button:first-child {
+    transform: translate(-6px, 3px);
+}
+
+.tree-btn-box button:hover {
+    color: #000000c7 !important;
+}
+
+/* Icon */
+:deep(.e-list-icon::after) {
+    font-weight: bold;
+}
+
+:deep(.e-list-icon.Root::after) {
+    font-family: aimcons;
+    content: "\e9d4";
+    color: #313756 !important;
+}
+
+/* Badge */
+:deep(.e-badge) {
+    position: absolute;
+    padding-top: 2.6px !important;
+    right: 10px;
+    top: 7px;
+    height: 17px;
+    border-radius: 10px;
+    background: #ffffff !important;
+    color: #007bff !important;
+    font-size: 11px;
+    text-align: center;
+    padding: 4px 5px;
+    border: 1px #63b7ff solid;
+}
+
+:deep(.e-treeview .e-list-item.e-active > .e-fullrow) {
+    border-radius: 5px;
+    border-color: #ffffff00 !important;
+}
+
+:deep(.e-treeview .e-list-item.e-active > .e-text-content .tree-node-id) {
+    font-weight: 500;
+}
+
+:deep(.e-active > .e-text-content .e-badge) {
+    background: #007bff !important;
+    color: white !important;
+    border: 1px #007bff solid;
+}
+
+/* #endregion */

@@ -1,0 +1,18 @@
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-sm:                $font-size-base * .875 !default;
+// Small tablets and large smartphones (landscape view)
+$font-weight: normal;
+
+$font-weight-bold: bolder;
+
+$font-weight-light: lighter;
+
+$font-weight-300: 300;
+
+$font-weight-400: 400;
+
+$font-weight-500: 500;
+
+$font-weight-600: 600;

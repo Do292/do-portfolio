@@ -1,0 +1,314 @@
+/*
+    [ 목차 ]
+    1. Input (Checkbox/InputPassword|InputUserId/InputSearch/SwitchLabel/SwitchFlag/Textbox)
+    2. Button (ButtonCollapse/ButtonDropdown/ButtonPin/ButtonText)
+*/
+
+/* #region Input */
+/* COMMON */
+.input-title-redonly:after {
+    position: relative;
+    content: "\ea07";
+    font-family: aimcons;
+    color: #fd7e14;
+    padding-left: 4px;
+    font-size: 12px;
+}
+
+/* Checkbox */
+.suite-checkbox .e-checkbox-wrapper .e-frame+.e-label {
+    margin-left: 7px !important;
+}
+
+/* #region #InputPassword|InputUserId */
+/* Common */
+
+
+.input-group input:read-only {
+    background: #f8f8f8 !important;
+}
+
+.input-group span {
+    position: absolute;
+    z-index: 100;
+    font-size: medium;
+    transform: translate(10px, 5px);
+    color: #858384cf;
+}
+
+/* InputPassword - Required Style */
+.input-group.password.required input:placeholder-shown {
+    background: #dc354511 !important;
+}
+
+.input-group.password.required input:placeholder-shown:focus {
+    border-color: #dc3545 !important;
+    outline: 1px solid #dc3545 !important;
+}
+
+.input-group.password.required input:focus {
+    border-color: #28a745 !important;
+    outline: 1px solid #28a745 !important;
+}
+
+/* InputPassword - Valid */
+.input-group.password.invalid input {
+    background: #fdf2f3 !important;
+}
+
+.input-group.password.invalid input:focus {
+    border-color: #dc3545 !important;
+    outline: 1px solid #dc3545 !important;
+}
+
+.input-group.password.valid input:focus {
+    border-color: #28a745 !important;
+    outline: 1px solid #28a745 !important;
+}
+
+/* InputPassword - Toggle Button */
+.input-group.password button {
+    position: absolute;
+    top: 5px;
+    right: 27px;
+}
+
+.input-group.password button :deep(i) {
+    font-size: 18px;
+    color: #21252949;
+}
+
+.input-group.password button:hover :deep(i) {
+    color: #21252988;
+}
+
+/* #endregion #InputPassword */
+
+/* #region #InputSearch */
+.search-field {
+    position: relative;
+}
+
+.search-field input {
+    cursor: pointer !important;
+    background: white !important;
+    border-color: #ced4da;
+    outline: none;
+    box-shadow: none;
+    padding: 0.16rem 0.75rem;
+}
+
+.search-field button {
+    position: absolute;
+    top: -1px;
+    right: 5px;
+    background: inherit !important;
+    border: none !important;
+}
+
+/* #endregion #InputSearch */
+
+
+/* #region #SwitchLabel|SwitchFlag */
+/* Layout */
+.switch-box {
+    display: inline-block;
+    width: max-content;
+}
+
+.switch-box .e-switch-wrapper {
+    height: 17px;
+    width: 37px;
+    transform: translateY(2px);
+}
+
+.switch-box .e-switch-handle {
+    width: 13px;
+    height: 13px;
+    background: #fff !important;
+    transform: translate(2px, -0px);
+}
+
+.switch-box .e-switch-handle.e-switch-active {
+    transform: translate(3px, -0px);
+}
+
+.switch-box .e-switch-on {
+    opacity: 0.9 !important;
+    background: rgb(38, 206, 49) !important;
+}
+
+.switch-box .e-switch-off {
+    opacity: 0.9 !important;
+    background: #b7b7b7 !important;
+}
+
+.switch-box .e-ripple-container {
+    display: none !important;
+}
+
+.switch-box .e-switch-wrapper.e-switch-disabled .e-switch-inner {
+    background: #ffffff00 !important;
+    opacity: 0.5;
+}
+
+/* Label */
+.switch-box label {
+    color: rgba(0, 0, 0, 0.54);
+    transform: translate(5px, -2px);
+}
+
+.switch-box.on label {
+    color: rgba(0, 0, 0, 0.733);
+}
+
+.switch-box:not(.enabled) label {
+    opacity: 0.5;
+}
+
+/* Flag */
+.switch-box.switch-flag .e-switch-handle::after {
+    content: "N";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 13px;
+    font-size: 8px !important;
+    font-family: "Roboto" !important;
+    text-indent: 0 !important;
+    font-weight: 700;
+    color: #58585890 !important;
+}
+
+.switch-box.switch-flag .e-switch-handle.e-switch-active::after {
+    content: "Y" !important;
+    color: rgb(38, 206, 49) !important;
+}
+
+.switch-box.e-switch-disabled .e-switch-handle::after {
+    opacity: 1 !important;
+}
+
+/* #endregion #SwitchLabel|SwitchFlag */
+
+/* #region #Textbox */
+/* 기본 Textbox */
+.e-input-group {
+    padding-left: 9px;
+    padding-right: 6px;
+    border-radius: 4px !important;
+    height: 28px;
+    border: 1px solid #e0e0e0 !important;
+}
+
+.e-input-group.e-disabled {
+    background-color: #fafafa !important;
+}
+
+.e-input-group .e-clear-icon {
+    right: 5px !important;
+    top: 8px !important;
+}
+
+.e-input-group .e-clear-icon::before {
+    font-size: 10px !important;
+}
+
+.e-input-group:not(.e-float-input) .e-clear-icon {
+    top: 5px !important;
+}
+
+.e-input-group:not(.e-input-focus) .e-clear-icon::before {
+    display: none !important;
+}
+
+/* Multi Line Textbox */
+.e-input-group.e-multi-line-input {
+    height: 30px;
+    max-height: 200px;
+}
+
+.e-input-group.e-multi-line-input textarea {
+    resize: none !important;
+    max-height: 190px;
+    padding-right: 30px !important;
+}
+
+/* #endregion #Textbox */
+
+/* #endregion */
+
+/* #region Button */
+/* ButtonAddList */
+.button-add-list {
+    position: absolute;
+    font-size: 20px !important;
+    top: -1.5px;
+    left: 8px;
+}
+
+/* #region #ButtonCollapse */
+.btn-collapse-box {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 35px;
+    overflow: hidden;
+}
+
+.btn-collapse {
+    width: 35px;
+    height: 50px;
+    transform: translateX(-7px);
+    border-radius: 10px;
+}
+
+.btn-collapse i {
+    font-size: 22px;
+    transform: translateX(2px);
+}
+
+/* #endregion #ButtonCollapse */
+
+/* #region #ButtonDropdown */
+.e-icons.e-caret {
+    color: #4d4d4d !important;
+    line-height: 20px !important;
+}
+
+.e-btn {
+    line-height: inherit !important;
+}
+
+/* #endregion #ButtonDropdown */
+
+/* ButtonFooter */
+.btn-bottom-dark {
+    padding: 0.3rem !important;
+}
+
+/* ButtonPin */
+.aim.aimcons_pin {
+    transform: rotate(-10deg);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+.fixed .aim.aimcons_pin {
+    transform: rotate(-30deg);
+}
+
+/* ButtonText */
+.button-text {
+    width: auto !important;
+    height: 25px !important;
+    padding: 0px 7px !important;
+    font-weight: 500 !important;
+    min-width: 50px !important;
+}
+
+/* #endregion */

@@ -1,0 +1,420 @@
+/*
+    [목차]
+    Common Handling
+        - Layout
+        - Info Card
+        - Info Step
+        - Field Style
+    FormStep
+    FormStepDetail
+    FormTeam
+    FormApproval
+    FormAuditPlan
+    FormAudit
+    FormAuditSummary
+*/
+
+/* #region Common Handling */
+/* #region Layout */
+.handling-info-container {
+    height: calc(100vh - 175px);
+}
+/* #endregion */
+
+/* #region Info Card */
+.handling-info-box {
+    position: relative;
+    height: calc(100vh - 180px) !important;
+    overflow: auto;
+    padding: 10px;
+    margin-right: 5px;
+}
+.handling-info-box .handling-info-card {
+    height: fit-content;
+    padding: 15px 20px;
+    overflow: auto;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.handling-info-border {
+    border-bottom: 1px solid rgb(235, 235, 235);
+    margin: 10px 0;
+}
+.handling-info-card.selecting {
+    box-shadow: 0 1px 6px 0 #20212447;
+    border-left: 7px solid;
+    /*border 색상은 computed property로 설정 */
+}
+.handling-info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.handling-info-title {
+    font-weight: 600;
+    font-size: larger;
+}
+.handling-info-step {
+    border-radius: 4px;
+    background: #e2eafd;
+    color: #0744cc;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.handling-info-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 95%;
+}
+/* #endregion */
+
+/* #region Info Step*/
+/* Config */
+.handling-info-config {
+    position: relative;
+    height: 125px;
+    padding: 0px 5px;
+    margin: 5px 20px;
+    margin-top: 10px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    overflow: auto;
+}
+.handling-info-title {
+    font-size: 1/2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.handling-info-no {
+    display: inline-block;
+    transform: translate(1px, -3px);
+
+    font-size: 12px;
+    font-weight: 500;
+
+    border-radius: 4px;
+    background: #ececec;
+    color: #747373;
+    padding: 0px 5px;
+}
+
+/* Content */
+.handling-info-content {
+    font-size: .85rem;
+    line-height: 25px;
+}
+
+.handling-info-content .content-field {
+    display: inline-block;
+    width: 150px;
+    min-width: 70px;
+    font-weight: 500;
+}
+
+.handling-info-content .content-value {
+    display: inline-block;
+}
+/* #endregion */
+
+
+/* #region Field Style */
+.handling-info-date i {
+    transform: translate(0, 1px);
+    color: #464646;
+}
+.handling-info-priority {
+    border-radius: 4px;
+    background: #ececec;
+    color: #747373;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.handling-info-priority.Low {
+    background: #e1f7e2;
+    color: #06c755;
+}
+.handling-info-priority.Middle {
+    background: #fff3e0;
+    color: #fc7e17;
+}
+.handling-info-priority.High {
+    background: #fce4ec;
+    color: #d81b60;
+}
+/* #endregion */
+
+/* #endregion */
+
+/* #region FormStep */
+/* Layout */
+.form-step-container {
+    position: relative;
+    display: flex;
+    padding: 10px 2px;
+    
+}
+.form-step {
+    position: relative;
+    height: calc(100vh - 420px);
+    padding: 5px;
+}
+.step-detail-container > .d-table-row > .field{
+    width: 120px;
+    vertical-align: top !important;
+    line-height: 40px !important;
+}
+.detail-content {
+    display: inline-block;
+    height: 100%;
+    overflow: hidden;
+}
+.step-content {
+}
+
+/* Step Title */
+.step-title .item-box {
+    transform: translateX(-3px);
+}
+
+/* Step */
+.step-config {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.step-container {
+    flex: 1;
+    cursor: pointer;
+    width: 100%;
+}
+.step-box {
+    position: relative;
+    display: flex;
+}
+.step-box .step-seq {
+    text-align: center;
+    position: relative;
+    display: flex;
+    padding: 4px 4px;
+    min-width: 100px;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    font-size: 22px;
+    line-height: 40px;
+    color: #323232;
+    padding-left: 10px;
+    border: 2px #e3e3e3 solid;
+    font-weight: 500;
+}
+
+.step-box.selecting .step-seq{
+  border: 2px solid #b6b6b6;
+}
+.step-box.submitted .step-seq,
+.step-box.completed .step-seq {
+  
+}
+.step-box.current .step-seq {
+    
+}
+
+.step-container:not(:last-child) .step-box.submitted::before,
+.step-container:not(:last-child) .step-box.completed::before {
+    background: #6e88ef;
+}
+.step-box.selecting {
+    font-weight: 500;
+}
+.step-id {
+    width: 114px;
+    height: 40px;
+    font-size: .85rem;
+    color: #515151;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    text-align: left;
+    font-weight: 500;
+}
+.step-box.selecting .step-id {
+    
+}
+
+/* Button */
+.step-button {
+    position: relative;
+    height: 30px;
+    text-align: end;
+    margin-right: 50px;
+}
+/* #endregion */
+
+/* #region FormStepDetail*/
+.step-detail-container {
+    position: relative;
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+.step-detail {
+    display: inline-block;
+    width: 100%;
+    padding: 3px 10px;
+}
+
+/* Multi Line */
+.step-detail.multi-line {
+    width: 100%;
+}
+.step-detail.multi-line .e-input-group.e-multi-line-input {
+    width: 100%;
+    height: inherit !important;
+    max-height: calc(50vh - 100px) !important;
+}
+.step-detail.multi-line .e-input-group.e-multi-line-input textarea {
+    height: calc(100% - 8px) !important;
+}
+.step-detail.multi-line .e-input-group.e-multi-line-input + .btn-simple {
+    top: 5px;
+    right: 4px;
+}
+/* #endregion */
+
+/* #region FormTeam*/
+#right-pane .info-team .e-gridcontent {
+    height: calc(100vh - 620px) !important;
+}
+
+.info-team .setting-member {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+/* #endregion */
+
+/* #region FormApproval*/
+/* Approval */
+.approval-container {
+    margin-top: 10px;
+}
+.approval-container .approval-header {
+    width: 100%;
+    height: 40px;
+    padding: 4px;
+    border-bottom: 1px #e0e0e0 solid;
+}
+
+/* Approver */
+.approver-box {
+    position: relative;
+    color: #222;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 24px;
+    border-bottom: 1px #e0e0e0 solid;
+}
+.approver-box .user-name {
+    font-weight: 500;
+}
+.approver-box .user-group {
+    font-weight: 500;
+    color: #4c4c4c;
+    font-size: 0.8rem;
+    line-height: 18px;
+}
+.approver-box .user-type {
+    font-weight: 500;
+    color: #7575759d;
+    font-size: 0.8rem;
+    line-height: 18px;
+}
+.approver-box .user-icon>i {
+    color: #aac0e782;
+}
+.approver-box .user-type span {
+    position: relative;
+    font-weight: 500;
+    font-size: 0.7rem;
+    margin-left: 1.5px;
+    display: inline-block;
+}
+.approver-box .user-type span.event-time {
+    padding-left: 5px;
+}
+.approver-box .user-type span.event-time::before {
+    content: "";
+    position: absolute;
+    background: #7575759a;
+    height: 10px;
+    width: 1px;
+    transform: translate(-5px, 4px);
+}
+.approver-box .opinion-box {
+    background: white;
+    height: 100%;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    border: 1px solid #aaa;
+}
+
+/* Status */
+.approver-box.In_Progress {
+    background: #b5d9ff1b !important;
+}
+.approver-box.Approved .user-type span.event-name {
+    color: royalblue;
+}
+.approver-box.Cancel .user-type span.event-name,
+.approver-box.Reject .user-type span.event-name {
+    color: orangered;
+}
+.approver-box.In_Progress .user-type span.event-name {
+    color: #757575;
+}
+/* #endregion */
+
+/* #region  FormAuditPlan*/
+#right-pane .info-audit-plan .e-gridcontent {
+    height: calc(100vh - 575px) !important;
+}
+
+.info-audit-plan .search-field button {
+    top: 19px
+}
+
+/* .info-audit-plan {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow-y: auto;
+    overflow-x:hidden;
+}
+
+.audit-plan {
+    width: 98%;
+}
+
+.audit-item {
+    border: 1px solid #ebebeb;;
+} */
+/* #endregion */
+
+/* #region  FormAudit*/
+#right-pane .info-audit .e-gridcontent {
+    height: fit-content !important
+}
+/* #endregion */
+
+/* #region  FormAuditSummary*/
+#right-pane .info-audit-summary .e-gridcontent {
+    height: calc(100vh - 520px) !important;
+}
+.info-audit-summary .e-input-group.e-disabled {
+    background-color: transparent !important;
+}
+/* #endregion */

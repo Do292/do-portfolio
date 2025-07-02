@@ -1,0 +1,395 @@
+
+/* Scss Document */
+@import "./mixins/font-style";
+@import "variables";
+@import "aim-responsive";
+//
+// Base styles
+//
+
+//
+// Base styles
+//
+
+.card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+	height: $card-height;
+	word-wrap: break-word;
+	background-color: $card-bg;
+	background-clip: border-box;
+	border-radius:$card-border-radius;
+  
+	> hr {
+	  margin-right: 0;
+	  margin-left: 0;
+	}
+  
+	> .list-group:first-child {
+	  .list-group-item:first-child {
+		border-top-left-radius:$card-border-radius;
+	  }
+	}
+  
+	> .list-group:last-child {
+	  .list-group-item:last-child {
+		border-top-right-radius:$card-border-radius;
+	  }
+	}
+	@include sm {
+		//padding:  $card-spacer-y $card-spacer-x;
+		padding:4px;
+	}	
+	@include md {
+		//padding:  $card-spacer-y $card-spacer-x;
+		padding:8px;
+	}
+	@include lg {
+		//padding:  $card-spacer-y $card-spacer-x;
+		padding:8px;
+		padding-left: 12px;
+		padding-right: 12px;
+	}		
+  }
+  .card.infor{
+  /*
+	  animation: mymove-info 0.8s infinite;
+	  animation-iteration-count: 1;
+	  animation-timing-function: cubic-bezier(0.44, 0.22, 1, 1)
+	}
+	
+	@keyframes mymove-info {
+	  0% {
+		  padding-right: 8px;
+	  }
+	  100% {
+		  padding-right: 370px;;
+	  }
+	
+	}*/
+	@include sm {
+		//padding:  $card-spacer-y $card-spacer-x;
+		padding-right: 12px;
+	}	
+	@include md {
+		//padding:  $card-spacer-y $card-spacer-x;
+		padding-right: 365px;
+	}
+	+.card-body> .wj-tabpanel> div> .wj-tabpanes> div> .info-btn2,
+	+.card-header + .card-body>div>.info-btn2,
+	+.card-body>div>.info-btn2,
+	+.info-btn2{
+	  right: 353px !important;
+	}
+	+.card-header + .card-body>div>.info-btn2::after,
+	+.card-body>div>.info-btn2::after,
+	+.info-btn2::after,
+	+.card-body> .wj-tabpanel> div> .wj-tabpanes> div> .info-btn2::after {
+		content: "";
+	}
+}
+
+  .card-body {
+	// Enable `flex-grow: 1` for decks and groups so that card blocks take up
+	// as much space as possible, ensuring footers are aligned to the bottom.
+	flex: 1 1 auto;
+	// Workaround for the image size bug in IE
+	// See: https://github.com/twbs/bootstrap/pull/28855
+	min-height: 1px;
+	//padding: $card-spacer-y $card-spacer-x;
+	padding: 0;
+	// padding-bottom: 20px !important;
+	// padding-right: 1rem !important;
+	color: $card-color;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	height: calc(100vh - 133px);
+	@include sm {
+		padding:3px;
+	}
+	@include md {
+		padding:3px;
+	}
+	@include lg {
+		//padding:  $card-spacer-y $card-spacer-x;
+		padding:3px;
+	}
+  }
+	.card-title {
+		margin-bottom: $card-spacer-y;
+
+	}
+	
+	.card-subtitle {
+		margin-top: calc(-1 * $card-spacer-y / 2);
+		margin-bottom: 0;
+	}
+	
+	.card-text:last-child {
+		margin-bottom: 0;
+	}
+	
+	.card-link {
+		:hover {
+		text-decoration: none;
+		}
+	
+		+ .card-link {
+		margin-left: $card-spacer-x;
+		}
+	}
+  
+  //
+  // Optional textual caps
+  //
+  
+  .card-header {
+	//padding: $card-spacer-y $card-spacer-x;
+	padding: 0;
+	margin-bottom: 0; // Removes the default margin-bottom of <hN>
+	color: $card-cap-color;
+	background-color:$card-bg;
+	// border-bottom: $card-border-width solid $card-border-color;
+	font-size: .95rem;
+	// border-bottom: 1px #eee solid;
+	margin:0px 6px 0px 3px;
+	// background: #e8f7ef !important;
+	// padding-right: 14px !important;
+	
+  
+	// &:first-child {
+	//   border-radius:$card-inner-border-radius $card-inner-border-radius 0 0;
+	// }
+
+	+ .list-group {
+	  .list-group-item:first-child {
+		border-top: 0;
+	  }
+	}
+	@include sm {
+		padding: 0;
+	}
+	@include md {
+		padding: 0;
+	}
+	@include lg {
+		//padding: $card-spacer-y $card-spacer-x;
+		padding: 0;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+	
+  }
+  
+  .card-footer {
+	padding: $card-spacer-y $card-spacer-x;
+	background-color: $card-bg;
+	border-top: $card-border-width solid $card-border-color;
+	height: 2.5rem;
+  
+	&:last-child {
+	border-radius:0 0 $card-inner-border-radius $card-inner-border-radius;
+	}
+	@include sm {
+		padding:.3rem;
+	}
+	@include md {
+		padding:.3rem;
+	}
+	@include lg {
+		padding: $card-spacer-y $card-spacer-x;
+	}
+  }
+  
+  
+  //
+  // Header navs
+  //
+  
+  .card-header-tabs {
+	margin-right: calc(-1 * $card-spacer-x / 2);
+	margin-bottom: -$card-spacer-y;
+	margin-left: calc(-1 * $card-spacer-x / 2);
+	border-bottom: 0;
+  }
+  
+  .card-header-pills {
+	margin-right: calc(-1 * $card-spacer-x / 2);
+	margin-left: calc(-1 * $card-spacer-x / 2);
+  }
+  
+  // Card image
+  .card-img-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: $card-img-overlay-padding;
+  }
+  
+  .card-img,
+  .card-img-top,
+  .card-img-bottom {
+	flex-shrink: 0; // For IE: https://github.com/twbs/bootstrap/issues/29396
+	width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  }
+  
+  .card-img,
+  .card-img-top {
+	border-top-left-radius:$card-inner-border-radius;
+  }
+  
+  .card-img,
+  .card-img-bottom {
+	border-top-right-radius:$card-inner-border-radius;
+  }
+
+  // Card deck
+  
+  .card-deck {
+	.card {
+	  margin-bottom: $card-deck-margin;
+	}
+  
+	@include sm {
+	  display: flex;
+	  flex-flow: row wrap;
+	  margin-right: -$card-deck-margin;
+	  margin-left: -$card-deck-margin;
+  
+	  .card {
+		// Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+		flex: 1 0 0%;
+		margin-right: $card-deck-margin;
+		margin-bottom: 0; // Override the default
+		margin-left: $card-deck-margin;
+	  }
+	}
+  }
+  
+  
+  //
+  // Card groups
+  //
+  
+  .card-group {
+	// The child selector allows nested `.card` within `.card-group`
+	// to display properly.
+	> .card {
+	  margin-bottom: $card-group-margin;
+	}
+  
+	@include sm {
+	  display: flex;
+	  flex-flow: row wrap;
+	  // The child selector allows nested `.card` within `.card-group`
+	  // to display properly.
+	  > .card {
+		// Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+		flex: 1 0 0%;
+		margin-bottom: 0;
+  
+		+ .card {
+		  margin-left: 0;
+		  border-left: 0;
+		}
+  
+		// Handle rounded corners
+		@if $enable-rounded {
+		  &:not(:last-child) {
+			border-top-right-radius: 0;
+  
+			.card-img-top,
+			.card-header {
+			  // stylelint-disable-next-line property-blacklist
+			  border-top-right-radius: 0;
+			}
+			.card-img-bottom,
+			.card-footer {
+			  // stylelint-disable-next-line property-blacklist
+			  border-bottom-right-radius: 0;
+			}
+		  }
+  
+		  &:not(:first-child) {
+			border-top-left-radius: 0;
+  
+			.card-img-top,
+			.card-header {
+			  // stylelint-disable-next-line property-blacklist
+			  border-top-left-radius: 0;
+			}
+			.card-img-bottom,
+			.card-footer {
+			  // stylelint-disable-next-line property-blacklist
+			  border-bottom-left-radius: 0;
+			}
+		  }
+		}
+	  }
+	}
+  }
+  
+  
+  //
+  // Columns
+  //
+  
+  .card-columns {
+	.card {
+	  margin-bottom: $card-columns-margin;
+	}
+  
+	@include sm {
+	  column-count: $card-columns-count;
+	  column-gap: $card-columns-gap;
+	  orphans: 1;
+	  widows: 1;
+  
+	  .card {
+		display: inline-block; // Don't let them vertically span multiple columns
+		width: 100%; // Don't let their width change
+	  }
+	}
+  }
+  
+  
+  //
+  // Accordion
+  //
+  
+  .accordion {
+	.card {
+	  overflow: hidden;
+  
+	  &:not(:last-of-type) {
+		border-bottom: 0;
+		border-bottom-left-radius: 0;
+	  }
+  
+	  &:not(:first-of-type) {
+		border-top-left-radius:0;
+	  }
+  
+	  > .card-header {
+		border-radius:0;
+		margin-bottom: -$card-border-width;
+	  }
+	}
+  }
+//   .card-body>div{
+// 	  height:inherit;
+//   }
+  .card {
+	
+
+	+ .info-btn2  {
+	  border-left: 0 white solid;
+	}
+}
+.modal-body>.card {
+	padding-right: 8px;
+}

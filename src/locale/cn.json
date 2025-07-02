@@ -1,0 +1,301 @@
+{
+    "localeTest": {
+        "want": "请连接想要的画面。"
+    },
+    "appHeader": {
+        "welcome": "welcome(중)",
+        "title": "nexBe+ Suite",
+        "modalLogout": {
+            "headerTitle": "Logout",
+            "bodyTitle1": "要退出吗？",
+            "bodyTitle2": "Log out?",
+            "bodyContent": "移动到登录界面。",
+            "footerButtonClose": "Close",
+            "footerButtonOk": "Ok"
+        }
+    },
+    "appFooter": {
+        "history": "History",
+        "navigation": "Navigation",
+        "memo": "Memo"
+    },
+    "menu": {
+        "loading": {
+            "loading": "Loading",
+            "circle": "Loading Circle"
+        },
+        "button": {
+            "button": "Button",
+            "speeddial": "SpeedDial"
+        },
+        "sample": {
+            "sample": "Sample",
+            "sample2": "Sample2",
+            "sample3": "Sample3",
+            "sample4": "Sample4",
+            "sampleChart": "Sample Chart"
+        },
+        "grid": {
+            "grid": "Grid",
+            "gridBasic": "Grid Basic",
+            "doubleGrid": "Double Grid",
+            "conditionGrid": "Condition Grid",
+            "textboxTreeGrid": "Textbox Tree Grid",
+            "comboboxTreeGrid": "Combobox Tree Grid",
+            "pagerGrid": "Client Pager Grid",
+            "dynamicPagerGrid": "Dynamic Pager Grid",
+            "dragDropGrid": "Drag and Drop Grid",
+            "groupingGrid": "Grouping Grid",
+            "stackedHeaderGrid": "Stacked Header Grid",
+            "commandColumnGrid": "Command Column Grid",
+            "aggregateGrid": "Aggregate Grid",
+            "columnTemplateGrid": "ColumnTemplate Grid"
+        },
+        "chart": {
+            "common": {
+                "xAxis": "x 축 타이틀",
+                "yAxis": "y 축 타이틀"
+            },
+            "chart": "Chart",
+            "method": "Chart (Method)",
+            "lineChart": {
+                "basic": "Basic Line Chart",
+                "various": "Various Line Chart"
+            },
+            "barChart": {
+                "column": "Bar Chart (Column)",
+                "stacked": "Bar Chart (Stacked)",
+                "etc": "Bar Chart (etc)"
+            },
+            "histogram": "Histogram",
+            "scatterChart": "Scatter Chart",
+            "bubble": "Bubble Chart",
+            "stockChart": "Stock Chart",
+            "accumulationChart": "Accumulation Chart",
+            "circularGaugeChart": "Circular Gauge Chart"
+        },
+        "dropdown": {
+            "dropdown": "DropDown",
+            "combobox": "ComboBox",
+            "dropdownlist": "DropDownList",
+            "listbox": "ListBox"
+        },
+        "input": {
+            "input": "Input",
+            "checkbox": "Checkbox",
+            "numericbox": "Numericbox",
+            "radiobutton": "Radio Button",
+            "textbox": "Textbox",
+            "switch": "Switch",
+            "fileuploader": "File Uploader",
+            "colorPicker": "Color Picker"
+        },
+        "calendar": {
+            "calendar": "Calendar",
+            "datePicker": "Date Picker",
+            "dateTimePicker": "DateTime Picker",
+            "timePicker": "Time Picker",
+            "scheduler": "Scheduler"
+        },
+        "layout": {
+            "layout": "Layout",
+            "horizontalSplitter": "Horizontal Splitter",
+            "verticalSplitter": "Vertical Half Splitter",
+            "dashboardLayout": "Dashboard Layout",
+            "listView": "List View",
+            "tooltipView": "Tooltip View"
+        },
+        "visualization": {
+            "visualization": "Visualization",
+            "codeGenerator": "Code Generator",
+            "print": "Print",
+            "icon": "Icon"
+        },
+        "viewereditor": {
+            "viewereditor": "Viewer&Editor",
+            "editor": "RichTextEditor",
+            "pdfviewer": "PDFViewer"
+        },
+        "navigation": {
+            "navigation": "Navigation",
+            "accordion": "Accordion",
+            "tab": "Tab",
+            "tree": "Tree"
+        },
+        "notification": {
+            "notification": "Notification",
+            "badge": "Badge"
+        },
+        "etc": {
+            "etc": "ETC(cn)",
+            "dynamicrouter": "Dynamic Router",
+            "barcodeQrReader": "Barcode/Qr Reader"
+        },
+        "modal": {
+            "modal": "Modal(cn)"
+        },
+        "admin": {
+            "admin": "Admin",
+            "user": "User",
+            "userMenu": "User Menu"
+        }
+    },
+    "main": {
+        "favorite": "Favorite Menu",
+        "memoModify": "修改Memo",
+        "writeMemo": "请做简要记录..."
+    },
+    "user": {
+        "leftTitle": "User Group",
+        "rightTitle": "User Profile"
+    },
+    "common": {
+        "id": "ID",
+        "name": "Name",
+        "version": "Version",
+        "type": "Type",
+        "custom": "Custom",
+        "history": "History",
+        "dragDropInfo": "Drag and drop 这个 grid 之间可行。",
+        "dragDropGrid": "Drag and drop 这个 grid 之内可行。"
+    },
+    "information": {
+        "title": "Information"
+    },
+    "button": {
+        "modify": "Modify",
+        "save": "Save",
+        "open": "Open",
+        "close": "Close",
+        "add": "Add",
+        "ok": "Ok",
+        "view": "View",
+        "delete": "Delete",
+        "set": "Set",
+        "apply": "Apply",
+        "search": "Search",
+        "reset": "Reset",
+        "changeData": "Change Data",
+        "addData": "Add Data",
+        "recall": "Recall",
+        "selectAll": "Select All",
+        "deselectAll": "Deselect All",
+        "saveAll": "Save All",
+        "importExcel": "ImportExcel",
+        "exportExcel": "ExportExcel",
+        "yes": "Yes",
+        "no": "No",
+        "cancel": "Cancel",
+        "clear": "Clear",
+        "update": "Update",
+        "write": "Write",
+        "read": "Read",
+        "inverseSelected": "Inverse Selected",
+        "report": "Report"
+    },
+    "modal": {
+        "type": {
+            "info": "Info",
+            "success": "Success",
+            "warning": "Warning",
+            "error": "Error",
+            "create": "Create",
+            "modify": "Modify",
+            "delete": "Delete",
+            "copy": "Copy"
+        },
+        "changeLanguage": {
+            "language": "Language"
+        },
+        "setting": {
+            "title": "Setting",
+            "changeSetting": "Change setting",
+            "language": "Language"
+        },
+        "create": {
+            "title": "Create List",
+            "key": "Key",
+            "value": "Value",
+            "valueUdfs": "Value Udfs",
+            "gridTitle": "New Add List View",
+            "confirmTitle": "Add",
+            "requiredKey": "请输入PrimaryKey 值。",
+            "mandatoryFlag": "请输入MadatoryFlag 值。",
+            "existData": "当前增加的 data 已存在。",
+            "noData": "No data to add",
+            "success": "Success",
+            "fail": "Fail",
+            "condition": "Condition",
+            "noDataToDelete": "没有要删除的 data。"
+        },
+        "modify": {
+            "title": "Modify List",
+            "panelTitle": "Modify items Select",
+            "gridTitle": "Modify List View",
+            "confirmTitle": "Modify",
+            "dependentValue": "请选择附属的值。",
+            "success": "Success",
+            "fail": "Fail",
+            "associateField": "当前所选 {param} 与 {param2} 有关联。"
+        },
+        "delete": {
+            "title": "Delete",
+            "content": "Do you want to delete?"
+        },
+        "apply": {
+            "confirmTitle": "Apply"
+        },
+        "confirm": {
+            "title": "Confirm",
+            "register": "新注册[{count}]个的 {name} 。",
+            "modify": "修改[{count}]个 data。",
+            "delete": "删除 {name} 。",
+            "apply": "Apply {attributeName}."
+        }
+    },
+    "info": {
+        "title": {
+            "success": "Success(중)"
+        },
+        "success": "Success",
+        "info": "Info",
+        "successDelete": "Success delete.",
+        "applied": "Applied."
+    },
+    "warning": {
+        "title": {
+            "enterItem": "Enter Item"
+        },
+        "selectData": "请选择数据。",
+        "selectOneData": "请选择一个数据。",
+        "enterItem": "请输入{param} 。",
+        "requiredField": "{param} 为必选值。",
+        "noMatching": "No matching values.",
+        "selectFirstData": "请先选择{param} 。",
+        "writeMemo": "Please write a content.",
+        "minimumTabCount": "At least one menu must be open."
+    },
+    "error": {
+        "title": {
+            "dataEmpty": "Data Empty",
+            "dataLoad": "Data Load",
+            "setData": "Set Data",
+            "userIdEmpty": "User Id Empty",
+            "userPwEmpty": "User Password Empty",
+            "loginFailure": "Login Failure",
+            "showDiagramFail": "Show Diagram Fail",
+            "drawNodeFail": "Draw Node Fail",
+            "invalidUserInfo": "Invalid User Info",
+            "saveFileFail": "Save File Fail",
+            "validationFail": "Validation Fail"
+        },
+        "dataEmpty": "无Data。请确认服务器。",
+        "fileEmpty": "文件为空。请确认服务器。",
+        "userIdEmpty": "请输入ID。",
+        "userPwEmpty": "请输入密码。",
+        "loginFailure": "登录失败。请确认用户ID/密码。",
+        "impossibleActiveState": "因所选 Data不是 {param} ，所以不行。",
+        "saveFileFail": "存储失败。",
+        "textMaxLength": "可输入的字符数为 {param}。"
+    }
+}

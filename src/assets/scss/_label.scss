@@ -1,0 +1,86 @@
+
+/* Scss Document */
+@import "./mixins/font-style";
+@import "variables";
+//
+// Base styles
+//
+//
+
+
+.item-title {
+	display: flex;
+	padding: 5px 2px;
+	align-items:baseline
+}
+  
+.item-title > label {
+	/* color: #131c47; */
+	display: flex;
+	position: relative;
+	font-size:  $label-font-size;
+	font-weight: 500 !important;
+}
+
+/* Title */
+.breadcrumb-box {
+	display:flex;
+	width: auto;
+	margin: 0 5px;
+	align-items:baseline
+}
+.breadcrumb {
+	display:inline-block;
+	border-radius: 20px;
+	font-size: $label-font-size-s;
+	opacity: 0.7;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background: rgba($hit-point, .15);
+	color: rgba($active-point, 1);
+	padding: 3px 10px 3px 5px;
+	opacity: 1;
+	margin-left: 6px;/*dylee*/
+}
+.breadcrumb.selectable {
+	cursor: pointer;
+}
+.breadcrumb::before {
+	content: "\eb30";
+	font-family: aimcons;
+	opacity: 0.5;
+	padding: 3px;
+	color: rgba($active-point, .85)!important;
+	opacity: 1;
+}
+.breadcrumb.selectable:not(:last-child):hover {
+	text-decoration: underline;
+}
+
+.count-down{
+	height: $header-height;
+	line-height: $header-line-height;
+	align-items: center;
+	display: flex;
+	>.count {
+		color: $white;
+		/*background: $active-point;*/
+		padding: 2px 4px 2px 15px;
+		border-radius: 14px;
+		align-items: center;
+		height: 28px;
+		line-height: 28px;
+
+		>span {
+			display: inline-block;
+			font-size: 15px;
+			font-weight: normal;
+			transform: translateY(-4px);
+		}
+		>.btn.btn-md{
+			transform: translateY(-3px);
+		}
+	}
+	
+}

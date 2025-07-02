@@ -1,0 +1,553 @@
+/* Scss Document */
+@import "breakpoint";
+@import "variables";
+
+
+/*custon*/
+.tab-content {
+	margin-left: auto;
+
+}
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+	width: calc(100vw - $side-width);
+
+	>.tab-pane {
+		display: none;
+	}
+
+	>.active {
+		display: block;
+	}
+
+	@include sm {
+		width: 100vw;
+		min-width: 425px;
+	}
+
+	@include md {
+		width: calc(100vw - $side-width);
+		min-width: 825px;
+	}
+}
+
+.wrapper .content-wrapper {
+	height: calc(100vh - 40px);
+	padding-top: $header-height;
+	overflow: hidden;
+
+	@include sm {
+		padding-left: $side-width-padding-sm !important;
+	}
+
+	@include md {
+		padding-left: 0 !important;
+	}
+}
+
+.content {
+	margin: 0;
+	padding: 0;
+}
+
+/**SideMenuOpen+MenoOpen**/
+.content.sideright {
+	@include sm {
+		width: calc(100vw - 254px);
+	}
+
+	@include md {
+		width: calc(100vw - 454px);
+	}
+}
+
+/**SideMenuclose+MenoOpen**/
+.content.right {
+	@include sm {
+		width: calc(100vw - 254px);
+	}
+
+	@include md {
+		width: calc(100vw - 254px);
+	}
+}
+
+.content-wrapper {
+	background: #fff;
+	position: relative;
+    top: 0px;
+    left: 55px;
+}
+
+.wrapper .main-content-wrapper {
+    height: calc(100vh - 56px);
+    padding-top: calc(56px + 15px)
+}
+
+.main-content-wrapper {
+    position: relative;
+    background-color: white;
+    top: 5px;
+    left: 0px;
+}
+
+.layout-navbar-fixed .wrapper .main-content-wrapper {
+    margin-top: calc(3.5rem + 1px);
+}
+
+
+.layout-navbar-fixed.text-sm .wrapper .main-content-wrapper {
+    margin-top: calc(2.93725rem + 1px);
+}
+
+.layout-navbar-not-fixed .wrapper .sidebar,
+.layout-navbar-not-fixed .wrapper .main-content-wrapper {
+    margin-top: 0;
+}
+
+.main-header,
+.main-footer,
+.main-sidebar,
+.main-sidebar-right,
+.modal-header {
+	background: #2F323D;
+	font-family: "Roboto", sans-serif !important;
+	/* font-weight: 500 !important; */
+	letter-spacing: normal !important;
+}
+
+
+.main-header {
+	height: $header-height;
+	line-height: $header-line-height;
+	position: fixed;
+	margin: 0 auto;
+	width: 100%;
+	min-width: 640px;
+	top: 0;
+	z-index: 999;
+	overflow: hidden;
+	// border-bottom: 1px $hit-point solid;
+
+	>div{
+		.header-logo{
+			height: $header-height;
+			width: 300px;
+			position: absolute;
+			color:$white;
+			border-radius: 0 20px 20px 0;
+		}
+		.logo {
+			position: absolute;
+			transform: translate(0, 2px);
+			top: -3px;
+			height: $header-height;
+			padding-left: 6px;
+		
+			@include sm {
+				margin: 0 auto;
+				left: 44px;
+				z-index: 10;
+			}
+		
+			@include md {
+				left: 0;
+			}
+			#logo {
+				display: inline-block;
+				height: $header-height;
+				padding:2px
+			}
+			i.aim,
+			i{
+				font-size: 1.7rem;
+				position: absolute;
+				left: 14px;
+				top: 0px;
+			}
+		}
+	}
+}
+
+
+.header-navi {
+
+	background: #2F323D;
+	padding-left:15px;
+	letter-spacing: .01rem;
+	height: inherit;
+
+	@include sm {}
+
+	@include md {
+		width: calc(100vw - 5px) !important;
+	}
+
+}
+
+.main-footer {
+	color: #989898 !important;
+	position: fixed;
+	bottom: 0;
+	z-index: 998;
+	right: 0;
+	/* border-radius: 2.3rem; */
+	/* margin: 0.4rem; */
+	font-size: .8rem;
+	width: 100%;
+	box-shadow: $box-shadow;
+	background: $nav-footer;
+	//height:$nav-footer-height;
+	height: 42px;
+
+}
+
+.main-footer>.copyright,
+.main-footer>.menu {
+	height: $nav-footer-height;
+	font-size: .75rem;
+	padding: 4px;/*dylee*/
+}
+
+.main-footer>.copyright {
+	position: absolute;
+	width: $side-width ;/*dylee*/
+	height: $nav-footer-height;
+	padding-left: 14px;/*dylee*/
+	display: inline !important;
+	line-height: 30px;
+
+	@include sm {
+		display: none;
+	}
+
+	@include md {
+		display: block;
+	}
+}
+.main-footer>.copyright>p{
+	display: inline;
+	padding-left: 8px;
+}
+.main-footer>.menu {
+	width: 100%;
+	height: $nav-footer-height;
+}
+
+.footer-btn {
+	position: fixed;
+	bottom: 0;
+	line-height: 20px;
+	z-index: 1038;
+	left: 0;
+	border-radius: 2.3rem 0 0 2.3rem;
+	margin: .22rem 0rem;
+	font-size: 1rem;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .5);
+	background: snow;
+	right: 0;
+	width: fit-content;
+	padding: 4px;
+
+	@include sm {
+		left: 100px;
+	}
+
+	@include md {
+		left: 200px;
+		;
+	}
+}
+
+.footer-btn::before {
+	content: '연관메뉴';
+	color: #32345b;
+	font-size: .7rem;
+	line-height: 35px;
+	padding: 0 5px;
+}
+
+.main-sidebar {
+	position: fixed;
+	top: 42px;
+	//left: 200px !important;
+	height: calc(100vh - 82px);
+	overflow-y: hidden;
+	padding: 0 0 0.5rem 0;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1.32rem;
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	//border-radius: 8px;
+	box-shadow: $box-shadow;
+
+	@include sm {
+		left: $side-width-padding-sm;
+		width: $side-width ;
+		//background: #15003e;
+		z-index: 999;
+		//height:calc(100vh - 1px);
+	}
+
+	@include md {
+		left: 0;
+		z-index: 100;
+		padding-left: 0;
+		width: $side-width;
+		//background: #15003e;
+		//height:calc(100vh - 1px);
+	}
+}
+/* Menu */
+.main-sidebar,
+.main-sidebar .sidebar {
+    width: 55px !important;
+    border-right: none;
+	overflow:hidden;
+}
+.main-sidebar-right {
+	position: fixed;
+	top: $header-height;
+	right: 0;
+	height: 100vh;
+	background: #001226;
+	overflow-y: hidden;
+	z-index: 1038;
+	padding: 1.3rem 0;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1.3rem;
+}
+
+
+.main-sidebar a:-moz-focusring,
+.main-sidebar-right a:-moz-focusring {
+	overflow-y: hidden;
+	z-index: 1038;
+	padding-top: 85px;
+	padding: 1rem .0rem;
+}
+
+.sidebar {
+	overflow-y: auto;
+	color: rgba(255, 255, 255, 0.596);
+	margin: .2rem 0;
+
+	@include sm {
+
+		background: transparent;
+		margin: 0;
+		// height: calc(100vh - 150px) !important;
+		max-height: 80vh;
+	}
+
+	@include md {
+		background: transparent;
+		// height: calc(100vh - 150px) !important;
+		margin: .5rem 0;
+
+	}
+}
+.sidebar3{
+    position: absolute;
+	top:0;
+    border-radius: 0 0 26px 26px;
+	padding: 5px 0 12px 0;
+}
+
+.sidebar-header {
+	line-height: 36px;
+	width: 100%;
+	//background-color: $hit-point;
+	background-color: rgb(138, 98, 235);
+	color: white;
+
+	@include sm {
+		margin: 0;
+		//padding: .5rem 0;
+		//background:transparent
+	}
+
+	@include md {
+		//background-color: $hit-point;
+		background-color: rgb(138, 98, 235);
+		margin: 0;
+		padding: 0;
+
+	}
+}
+
+.sidebar-header {
+
+	>.col>i {
+
+		@include sm {
+			display: none !important;
+		}
+
+		@include md {
+			display: block !important;
+			margin-top: 8px;
+		}
+	}
+}
+
+.sidebar-menu {
+	display: inline-block;
+	color: white;
+	width: 100%;
+	font-size: .9rem;
+	margin-bottom: 0px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.side-holder,
+.side-fixed {
+	width: 30px;
+	height: 32px;
+	border-radius: 0;
+	position: fixed;
+	left: 195px;
+	z-index: 101;
+	line-height: 30px;
+	color: $white;
+	text-align: center;
+	line-height: 32px;
+	cursor: pointer;
+
+}
+
+.side-holder.left {
+	border-radius: 0px 20px 20px 0px;
+
+	@include sm {
+		left: 280px;
+		//left: 245px;
+		margin: .5rem;
+		z-index: 1000;
+		top: 37px;
+	}
+
+	@include md {
+		//left: 370px;
+		left: 167px;
+		top: 42px;
+		margin: 0;
+	}
+}
+
+.side-fixed.left {
+	left: 130px;
+	font-size: .9rem;
+	top: 46px;
+
+}
+
+.side-holder.right {
+	left: 160px;
+
+}
+
+.side-fixed.ight {
+	left: 130px;
+
+}
+
+.side-holder>a,
+.side-fixed>a {
+	display: inline-block;
+	width: inherit;
+	height: inherit;
+}
+
+.side-holder.open01,
+.side-holder.colse01 {
+	left: 0;
+	color: $white
+}
+
+.side-holder.open01 {
+	height: 44px;
+	line-height: 44px;
+	display: none;
+
+	@include sm {
+		z-index: 10000;
+		/* position: fixed; */
+		/* border-radius: 0; */
+		display: none;
+	}
+
+	@include md {
+		left: 0;
+		background-color: $hit-point;
+		display: block;
+	}
+}
+
+.side-holder.open01 .aim:after,
+.side-holder.close01 .aim:after,
+.side-fixed.open01 .aim:after,
+.side-fixed.close01 .aim:after {
+	padding-right: 6px;
+	color: $white
+}
+
+.side-fixed.open01 .aim:before,
+.side-fixed.close01 .aim:before,
+.side-fixed.open01 .aim:before,
+.side-fixed.close01 .aim:before {
+	/*content: "MenuBar";*/
+	padding-right: 5px;
+	color: $white;
+	font-size: 1rem;
+	vertical-align: text-top;
+}
+
+.side-holder.open01 .aim:after {
+	content: "\e967";
+	transform: rotate(-10deg)
+}
+
+.side-holder.close01 .aim:after {
+	content: "\e967";
+}
+
+.side-holder.open01 .aim:after {
+	content: "\e9f5";
+}
+
+.side-holder.close01 .aim:after {
+	content: "\e9f4";
+}
+
+@include sm {
+
+	.main-header {
+		font-size: 97% !important;
+	}
+}
+
+@include md {
+
+	.main-header {
+		font-size: 100% !important;
+	}
+
+}
+
+@include lg {
+
+	.main-header {
+		font-size: 100% !important;
+	}
+
+}

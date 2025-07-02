@@ -1,0 +1,409 @@
+
+/* Scss Document */
+@import "./mixins/font-style";
+@import "variables";
+
+//
+// Base styles
+//
+
+.btn {
+	display: inline-block;
+	font-family: $btn-font-family;
+	font-weight: $btn-font-weight;
+	color:  $white;
+	text-align: center;
+	white-space: $btn-white-space;
+	vertical-align: bottom;
+	cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
+	user-select: none;
+	border: $btn-border-width solid transparent;
+	font-size:$btn-font-size;
+	padding:$btn-padding-y, $btn-padding-x;
+	line-height: $btn-line-height;
+	border-radius: $btn-border-radius;
+	transition:$btn-transition;
+	min-width:60px;
+
+
+	&:hover {
+	background-color:$black;
+	color:  $white;
+	text-decoration: none;
+	}
+  
+	&:focus,
+	&.focus {
+	  outline: 0;
+	//   box-shadow: $btn-focus-box-shadow;
+	}
+  
+	// Disabled comes first so active can properly restyle
+	&.disabled,
+	&:disabled {
+	  opacity: $btn-disabled-opacity;
+	  box-shadow:none;
+	  background-color: rgba(0, 0, 0, 0.3) !important;
+	  border: 1px rgba(0, 0, 0, 0.3) !important;
+	  color: #222;
+	  pointer-events: none;
+	  
+	}
+	&.disabled>i{
+		opacity: $btn-disabled-opacity;
+		color: #222;
+	}
+
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active {
+	 box-shadow:$btn-active-box-shadow;
+  
+	 &:focus {
+	//  box-shadow:$btn-focus-box-shadow, $btn-active-box-shadow;
+	  }
+	}
+  }
+  .btn+.btn{
+	  margin-left:6px;
+  }
+  // Future-proof disabling of clicks on `<a>` elements
+  fieldset:disabled .btn {
+	pointer-events: none;
+	box-shadow: none;
+	background-color: rgba(0, 0, 0, 0.3) !important;
+    border: 1px rgba(0, 0, 0, 0.3) !important;
+    color: #000;
+    opacity: 0.45;
+  }
+  
+
+  .btn-default {
+	// color:  #454755;
+	background-color:$default;
+	border:$btn-border-width solid $border-color;
+
+
+
+	&:hover {
+		color:$dark;
+		background-color:$gray-400;
+	}
+  
+	&:focus,
+	&.focus {
+	  outline: 0;
+	//   box-shadow: $btn-focus-box-shadow;
+	}
+  
+  }
+  
+
+
+
+
+  // Link buttons
+  //
+  
+  // Make a button look and behave like a link
+  .btn-link {
+	font-weight: $font-weight-normal;
+	color: $link-color;
+	text-decoration: $link-decoration;
+  
+	&::hover {
+	  color: $link-hover-color;
+	  text-decoration: $link-hover-decoration;
+	}
+  
+	&::focus{
+	  text-decoration: $link-hover-decoration;
+	  box-shadow: none;
+	}
+  
+	&:disabled{
+	  color: $btn-link-disabled-color;
+	  pointer-events: none;
+	}
+  
+	// No need for an active state here
+  }
+  
+  .btn-excel {
+	background:$excel ;
+	font-weight: $font-weight-normal;
+	color: $white;
+	text-decoration: $link-decoration;
+  
+	&:hover {
+	  background:$green ;
+	  color: $white;
+	  text-decoration: $link-hover-decoration;
+	}
+  
+	&:focus{
+	 background:$green ;
+	  text-decoration: $link-hover-decoration;
+	  box-shadow: none;
+	}
+  
+	&:disabled{
+	  color: $btn-link-disabled-color;
+	  pointer-events: none;
+	}
+  
+	// No need for an active state here
+  } 
+  //
+  // Button Sizes
+  //
+  
+  .btn-lg {
+	padding:$btn-padding-y-lg $btn-padding-x-lg;
+	font-size:$btn-font-size-lg; 
+	line-height:$btn-line-height-lg;
+	border-radius:$btn-border-radius-lg;
+  }
+  
+  .btn-md {
+
+	padding:$btn-padding-y-md $btn-padding-x-md;
+	font-size:$btn-font-size-md; 
+	line-height:$btn-line-height-md;
+	border-radius:$btn-border-radius-md 
+	}
+   
+  .btn-sm {
+
+	padding:0 $btn-padding-x-sm;
+	font-size:$btn-font-size-sm; 
+	line-height:$btn-line-height-sm;
+	border-radius:$btn-border-radius-sm;
+	font-size: 0.75rem;
+	}
+  
+  
+  //
+  // Block button
+  //
+  
+
+
+  .btn-block {
+	display: block;
+	width: 100%;
+  
+	
+	// Vertically space out multiple block buttons
+	+ .btn-block {
+	  margin-top: $btn-block-spacing-y;
+	}
+  }
+  
+  .btn-block + .btn-block {
+	margin-top: 0.5rem;
+  }
+
+  // Specificity overrides
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+	&.btn-block {
+	  width: 100%;
+	}
+  }
+    
+
+  .btn-lg{
+	padding: 0.5rem 1rem;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	border-radius: 0.3rem;
+  }  
+  .btn-group-lg {
+	.btn {
+	padding: 0.5rem 1rem;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	border-radius: 0.3rem;
+  }
+}
+  
+   .btn-group-sm { 
+	.btn {
+	padding: 0.25rem 0.5rem;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	border-radius: 0.2rem;
+  }
+}
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.btn-group > .btn,
+.btn-group-vertical > .btn {
+  position: relative;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+ 
+}
+
+.btn-group > .btn:hover,
+.btn-group-vertical > .btn:hover {
+  z-index: 1;
+}
+
+.btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+.btn-group-vertical > .btn:focus,
+.btn-group-vertical > .btn:active,
+.btn-group-vertical > .btn.active {
+  z-index: 1;
+}
+.btn-con-fix {
+	color: white;
+	background-color:#2f323def;
+	border-color:#2f323def;
+	box-shadow: none ;
+	border-radius: 2.3rem;
+	padding: 3px 8px;
+    margin: 4px;
+
+	&:hover,
+	&:focus,
+	+.active,
+	+.open {
+	  /* background: #e2e2e2; */
+	  background-color:#2f323d;
+	  border-color:#2f323d;
+	  color: white;
+	}
+  }
+  .btn-con-dblue-navy {
+	color: white !important;
+	background-color: navy !important;
+	border-color: navy !important;
+	box-shadow: none !important;
+	
+	&:hover,
+	&:focus,
+	+.active,
+	+.open {
+	background-color: rgb(0, 0, 88) !important;
+	color: white !important ;
+  }
+}
+.btn-con-reg {
+	color: white !important;
+	background-color: navy !important;
+	border-color: navy !important;
+	box-shadow: none !important;
+	
+	&:hover,
+	&:focus,
+	+.active,
+	+.open {
+	background-color: rgb(0, 0, 88) !important;
+	color: white !important ;
+  }
+}
+
+.btn-con-remove {
+	background-color: #db2828 !important;
+	border-color: #db2828 !important;
+	box-shadow: none !important;
+	color: white !important;
+	
+	&:hover,
+	&:focus,
+	+.active,
+	+.open {
+	background-color: #c72424 !important;
+	border-color: #c72424 !important;
+	color: white !important ;
+  }
+}
+.btn-toolbar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.btn-toolbar .input-group {
+  width: auto;
+}
+
+.btn-group > .btn:not(:first-child),
+.btn-group > .btn-group:not(:first-child) {
+  margin-left: -1px;
+}
+
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-group > .btn:not(:first-child),
+.btn-group > .btn-group:not(:first-child) > .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.filter-header,
+.info-header{
+	div>button.btn-pin{
+		color:$gray-650 !important;
+		border-radius: 20px;
+		font-weight:600 !important;
+		font-size: .8rem;
+		padding: 0px 4px;
+		background:$transparent;
+
+		&:focus,
+		&:hover,
+		&:active,
+		+.active,
+		+.open {
+			color:$white !important;
+		}
+		>i { 
+		font-size: 1.05rem;
+		}
+	}
+}
+.sub-menu{
+	button.btn-pin{
+		color:$white ;
+		border-radius: 20px;
+		font-weight:600 !important;
+		font-size: .8rem;
+		padding: 0px 4px;
+		background:$transparent;
+
+		&:focus,
+		&:hover,
+		&:active,
+		+.active,
+		+.open {
+		color:$white;
+
+		}
+		>i { 
+		font-size: 1rem;
+		}
+	}
+}
+
+.info-header,
+.sub-menu{
+
+	button.fixed {
+		color: $white !important;
+		}
+}

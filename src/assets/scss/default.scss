@@ -1,0 +1,56 @@
+body {
+    background: var(--bg-color);
+    color: var(--font-color);
+  }
+  
+  input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline-style: none;
+  
+    background: var(--input-bg);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    color: var(--input-c);
+  }
+  
+  input::-webkit-inner-spin-button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  
+  button {
+    border: var(--border);
+    border-radius: var(--border-radius);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  @keyframes riseUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  // Colors
+$bg-color: rgb(251, 251, 251);
+$dot-color: rgba(118, 123, 175, 0.055);
+
+// Dimensions
+$dot-size: 3px;
+$dot-space: 12px;
+
+.eqp-bg{
+	background:
+		linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+		$dot-color;
+	background-size: $dot-space $dot-space;
+}

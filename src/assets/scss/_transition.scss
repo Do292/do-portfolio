@@ -1,0 +1,42 @@
+
+/* Scss Document */
+@import "./mixins/font-style";
+@import "variables";
+//
+// Base styles
+//
+
+//
+// Basic Bootstrap table
+//
+
+.fade {
+  transition:$transition-fade;
+
+  &:not(.show) {
+    opacity: 0;
+  }
+}
+
+.collapse {
+  &:not(.show) {
+    display: none;
+  }
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition:$transition-collapse;
+}
+
+.base {
+  transition:$transition-base;
+  
+}
+
+.easeinout {
+  transition:$transition-easeinout;
+  
+}

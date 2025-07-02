@@ -1,0 +1,37 @@
+
+/* Scss Document */
+@import "breakpoint";
+@import "variables";
+@import "grid";
+//
+// Base styles
+//
+//
+
+.grid-form,
+#right-pane,
+#right-pane{  /*dylee*/
+	/*position: relative;*/
+
+.row > [class*="col-"].item-title{
+	margin: 6px 0px 5px 0px;
+	}
+.row > [class*="col-"].text-right {
+	margin: 6px 0px 5px 0px;
+	}
+	
+}
+
+.grid-form,/*dylee*/
+#top-pane,
+#top-pane{  
+	/*position: relative;*/
+
+.row > [class*="col-"].item-title{
+	margin: 6px 0px 5px 0px;
+	}
+.row > [class*="col-"].text-right {
+	margin: 6px 0px 5px 0px;
+	}
+	
+}

@@ -1,0 +1,19 @@
+/* Scss Document */
+@import "./mixins/font-style";
+@import "variables";
+//
+// Base styles
+//
+//
+
+
+.e-grid td.e-active {
+    /*dylee*/
+    background: #2f77b7 !important;
+    color: #fff !important;
+}
+
+.e-grid td.e-active>i {
+    /*dylee*/
+    color: #fff;
+}

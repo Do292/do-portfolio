@@ -1,0 +1,164 @@
+/* Scss Document */
+@import "./mixins/font-style";
+@import "breakpoint";
+@import "grid";
+@import "variables";
+
+.filter-container {
+  display: flex;
+  width: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: calc(100vh - 120px);
+  
+
+  >.filter-box {
+    width: 245px;
+    height: inherit;
+  }
+
+  .filter-btn {
+    position: relative;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1000;
+    width: 20px;
+    height: inherit;
+
+    i {
+      background: transparent;
+      padding: 10px 7px;
+      color: #ffffffcc !important;
+      z-index: 10000;
+      position: fixed;
+      left: 0;
+      top: 138px;
+      width: 55px;
+      text-align: center;
+      font-size: 1.24rem;
+      
+
+      &:focus,
+      &:hover,
+      &:active {
+         background: transparent;
+        color: $white !important;
+      }
+    }
+
+  }
+}
+
+#filter-container {
+  position: relative;
+  background: #f4f5f7;
+  border-top-right-radius: 4px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  margin-right: -1px;
+  border-width: 1px;
+  border-color: $information-border;
+  border-style: solid;
+  height: inherit;
+  z-index: 99;
+
+    >.filter-header {
+      border-radius: inherit;
+      background: #f7f9fc;
+      height: 42px;
+      line-height: 42px;
+      color: rgba($black, .8);
+      padding: 0 10px;
+      border-bottom: 1px $information-border solid;
+
+      >div>label.filter-label {
+        display: inline-block;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+    }
+    .filter-container02 {
+      height: calc(100vh - 305px);
+      background: $white !important;
+      padding: 12px 16px;
+
+     > .filter-card {
+        border-bottom: 1px #d1d1d1 solid ;
+
+      >.filter-content-header{
+          border-radius: 0;
+          overflow: hidden;
+          line-height: 24px;
+          text-decoration: none;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: .8rem;
+          
+          >label{
+            border-bottom: 1px darkgray solid;
+            margin-bottom: 0px;
+          }
+        }
+    
+
+      >.filter-content{
+        padding: 8px 0px 14px 0px;
+
+        >.d-table>.d-table-row{
+          line-height: 2;
+         
+          >.e-input-group.e-control-wrapper{
+            width: 100%;
+            margin-bottom: 10px !important;
+          }
+          >div >.e-float-input.e-control-wrapper{
+            width: 100% !important;
+          }
+
+          &.e-float-input,
+          .e-float-input.e-control-wrapper{
+           margin-left: 0px !important;
+           margin-right: 0px !important;
+           margin-bottom: 6px !important;
+            
+          }
+        }
+      }
+    }
+  }   
+}
+
+.filter-container02{
+  height: calc(100vh - 320px);
+}
+.filter-card + .filter-card{
+  margin-top: 16px;
+}
+.filter-container02 >div:last-child{
+  border-bottom: 0px !important;
+}
+.card.filter {
+  @include sm {
+    padding-left: 20px;
+  }
+
+  @include md {
+    //padding:  $card-spacer-y $card-spacer-x;
+    padding-left: 265px;
+  }
+
+  +.card-body>.wj-tabpanel>div>.wj-tabpanes>div>.info-btn2,
+  +.card-header+.card-body>div>.filter-btn,
+  +.card-body>div>.filter-btn,
+  +.filter-btn {
+    left: 353px !important;
+  }
+
+  +.card-header+.card-body>div>.filter-btn::after,
+  +.card-body>div>.filter-btn::after,
+  +.filter-btn::after,
+  +.card-body>.wj-tabpanel>div>.wj-tabpanes>div>.filter-btn::after {
+    content: "";
+  }
+
+}

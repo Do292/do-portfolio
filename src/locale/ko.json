@@ -1,0 +1,324 @@
+{
+    "localeTest": {
+        "want": "원하는 화면 연결하세여"
+    },
+    "appHeader": {
+        "welcome": "welcome(한)",
+        "title": "nexBe+ Suite",
+        "modalLogout": {
+            "headerTitle": "로그아웃",
+            "bodyTitle1": "로그아웃 하시겠습니까?",
+            "bodyTitle2": "Log out?",
+            "bodyContent": "로그인 화면으로 이동합니다.",
+            "footerButtonClose": "Close",
+            "footerButtonOk": "Ok"
+        }
+    },
+    "appFooter": {
+        "history": "History",
+        "navigation": "Navigation",
+        "memo": "Memo"
+    },
+    "menu": {
+        "loading": {
+            "loading": "Loading",
+            "circle": "Loading Circle"
+        },
+        "button": {
+            "button": "Button",
+            "speeddial": "SpeedDial"
+        },
+        "sample": {
+            "sample": "Sample",
+            "sample2": "Sample2",
+            "sample3": "Sample3",
+            "sample4": "Sample4",
+            "sampleChart": "샘플 차트"
+        },
+        "grid": {
+            "grid": "Grid",
+            "gridBasic": "Grid Basic",
+            "doubleGrid": "Double Grid",
+            "conditionGrid": "Condition Grid",
+            "textboxTreeGrid": "Textbox Tree Grid",
+            "comboboxTreeGrid": "Combobox Tree Grid",
+            "pagerGrid": "Client Pager Grid",
+            "dynamicPagerGrid": "Dynamic Pager Grid",
+            "dragDropGrid": "Drag and Drop Grid",
+            "groupingGrid": "Grouping Grid",
+            "stackedHeaderGrid": "Stacked Header Grid",
+            "commandColumnGrid": "Command Column Grid",
+            "aggregateGrid": "Aggregate Grid",
+            "columnTemplateGrid": "ColumnTemplate Grid"
+        },
+        "chart": {
+            "common": {
+                "xAxis": "x 축 타이틀",
+                "yAxis": "y 축 타이틀"
+            },
+            "chart": "Chart",
+            "method": "Chart (Method)",
+            "lineChart": {
+                "basic": "Basic Line Chart",
+                "various": "Various Line Chart"
+            },
+            "barChart": {
+                "column": "Bar Chart (Column)",
+                "stacked": "Bar Chart (Stacked)",
+                "etc": "Bar Chart (etc)"
+            },
+            "histogram": "Histogram",
+            "scatterChart": "Scatter Chart",
+            "bubble": "Bubble Chart",
+            "stockChart": "Stock Chart",
+            "accumulationChart": "Accumulation Chart",
+            "circularGaugeChart": "Circular Gauge Chart"
+        },
+        "dropdown": {
+            "dropdown": "DropDown",
+            "combobox": "ComboBox",
+            "dropdownlist": "DropDownList",
+            "listbox": "ListBox"
+        },
+        "input": {
+            "input": "Input",
+            "checkbox": "Checkbox",
+            "numericbox": "Numericbox",
+            "radiobutton": "Radio Button",
+            "textbox": "Textbox",
+            "switch": "Switch",
+            "fileuploader": "File Uploader",
+            "colorPicker": "Color Picker"
+        },
+        "calendar": {
+            "calendar": "Calendar",
+            "datePicker": "Date Picker",
+            "dateTimePicker": "DateTime Picker",
+            "timePicker": "Time Picker",
+            "scheduler": "Scheduler"
+        },
+        "layout": {
+            "layout": "Layout",
+            "horizontalSplitter": "Horizontal Splitter",
+            "verticalSplitter": "Vertical Half Splitter",
+            "dashboardLayout": "Dashboard Layout",
+            "listView": "List View",
+            "tooltipView": "Tooltip View"
+        },
+        "visualization": {
+            "visualization": "Visualization",
+            "codeGenerator": "Code Generator",
+            "print": "Print",
+            "icon": "Icon"
+        },
+        "viewereditor": {
+            "viewereditor": "Viewer&Editor",
+            "editor": "RichTextEditor",
+            "pdfviewer": "PDFViewer"
+        },
+        "navigation": {
+            "navigation": "Navigation",
+            "accordion": "Accordion",
+            "tab": "Tab",
+            "tree": "Tree"
+        },
+        "notification": {
+            "notification": "Notification",
+            "badge": "Badge"
+        },
+        "etc": {
+            "etc": "기타",
+            "dynamicrouter": "Dynamic Router",
+            "barcodeQrReader": "Barcode/Qr Reader"
+        },
+        "modal": {
+            "modal": "Modal"
+        },
+        "admin": {
+            "admin": "관리자",
+            "user": "사용자",
+            "userMenu": "User Menu"
+        }
+    },
+    "main": {
+        "favorite": "Favorite Menu",
+        "memoModify": "Memo 수정",
+        "writeMemo": "간단한 메모를 써주세요..."
+    },
+    "user": {
+        "leftTitle": "User Group",
+        "rightTitle": "User Profile"
+    },
+    "common": {
+        "id": "ID",
+        "name": "Name",
+        "version": "Version",
+        "type": "Type",
+        "custom": "Custom",
+        "information": "Information",
+        "history": "History",
+        "dragDropInfo": "Drag and drop 이 그리드 사이에서 가능합니다.",
+        "dragDropGrid": "Drag and drop 이 그리드 안에서 가능합니다."
+    },
+    "information": {
+        "title": "정보"
+    },
+    "button": {
+        "action": "Action",
+        "modify": "Modify",
+        "save": "Save",
+        "open": "Open",
+        "close": "Close",
+        "clone": "Clone",
+        "confirm": "Confirm",
+        "add": "Add",
+        "ok": "Ok",
+        "view": "View",
+        "delete": "Delete",
+        "set": "Set",
+        "apply": "Apply",
+        "approve": "Approve",
+        "edit": "Edit",
+        "submit": "Submit",
+        "return": "Return",
+        "reject": "Reject",
+        "setting": "Setting",
+        "search": "Search",
+        "reset": "Reset",
+        "changeData": "Change Data",
+        "addData": "Add Data",
+        "recall": "Recall",
+        "selectAll": "Select All",
+        "deselectAll": "Deselect All",
+        "saveAll": "Save All",
+        "importExcel": "ImportExcel",
+        "exportExcel": "ExportExcel",
+        "yes": "Yes",
+        "no": "No",
+        "cancel": "Cancel",
+        "clear": "Clear",
+        "update": "Update",
+        "write": "Write",
+        "read": "Read",
+        "inverseSelected": "Inverse Selected",
+        "report": "Report",
+        "preview": "Preview"
+    },
+    "modal": {
+        "type": {
+            "info": "인포",
+            "success": "성공",
+            "warning": "경고",
+            "error": "에러",
+            "create": "추가",
+            "modify": "수정",
+            "delete": "삭제",
+            "copy": "복사"
+        },
+        "changeLanguage": {
+            "language": "Language"
+        },
+        "setting": {
+            "title": "설정",
+            "changeSetting": "설정 변경",
+            "language": "언어"
+        },
+        "create": {
+            "title": "Create List",
+            "key": "Key",
+            "value": "Value",
+            "valueUdfs": "Value Udfs",
+            "gridTitle": "New Add List View",
+            "confirmTitle": "Add",
+            "requiredKey": "PrimaryKey 값을 입력하세요.",
+            "mandatoryFlag": "MandatoryFlag 값을 입력하세요.",
+            "existData": "추가된 Data가 이미 존재합니다.",
+            "noData": "No data to add",
+            "success": "Success",
+            "fail": "Fail",
+            "condition": "Condition",
+            "policy": "Policy: ",
+            "noDataToDelete": "No data to delete"
+        },
+        "modify": {
+            "title": "Modify List",
+            "panelTitle": "Modify items Select",
+            "gridTitle": "Modify List View",
+            "confirmTitle": "Modify",
+            "dependentValue": "종속되어진 값을 선택하세요.",
+            "success": "Success",
+            "fail": "Fail",
+            "associateField": "선택된 {param} 는 {param2} 와 관련이 있습니다."
+        },
+        "apply": {
+            "confirmTitle": "Apply"
+        },
+        "confirm": {
+            "title": "확인",
+            "register": "[{count}]개의 {name} 신규 등록 합니다.",
+            "modify": "[{count}]개 Data를 수정 합니다.",
+            "delete": "{name} 삭제 합니다.",
+            "apply": "{attributeName}을 적용합니다."
+        },
+        "delete": {
+            "title": "삭제",
+            "content": "삭제 하시겠습니까?"
+        }
+    },
+    "info": {
+        "title": {
+            "success": "Success"
+        },
+        "success": "Success",
+        "info": "Info",
+        "successDelete": "삭제 되었습니다.",
+        "applied": "적용 되었습니다."
+    },
+    "warning": {
+        "title": {
+            "enterItem": "Enter Item"
+        },
+        "selectData": "데이터를 선택하세요.",
+        "selectOneData": "하나의 데이터를 선택하세요.",
+        "limitCheckCount": "{checkboxMaxSize}개 이상 선택할수 없습니다.",
+        "enterItem": "{param} 입력하세요.",
+        "requiredField": "{param} 필수 값 입니다.",
+        "noMatching": "No matching values.",
+        "selectFirstData": "{param} 먼저 선택하세요.",
+        "writeMemo": "내용을 입력하세요.",
+        "minimumTabCount": "최소 1개의 메뉴는 열려있어야 합니다."
+    },
+    "error": {
+        "title": {
+            "dataEmpty": "Data Empty",
+            "dataLoad": "Data Load",
+            "setData": "Set Data",
+            "userIdEmpty": "User Id Empty",
+            "userPwEmpty": "User Password Empty",
+            "loginFailure": "Login Failure",
+            "showDiagramFail": "Show Diagram Fail",
+            "drawNodeFail": "Draw Node Fail",
+            "invalidUserInfo": "Invalid User Info",
+            "saveFileFail": "Save File Fail",
+            "validationFail": "Validation Fail"
+        },
+        "dataEmpty": "Data가 없습니다. 서버를 확인해 주세요.",
+        "fileEmpty": "파일이 비었습니다. 서버를 확인해 주세요.",
+        "userIdEmpty": "아이디를 입력해 주세요.",
+        "userPwEmpty": "비밀번호를 입력해 주세요.",
+        "loginFailure": "로그인 실패. 사용자의 아이디/비밀번호를 확인하세요.",
+        "impossibleActiveState": "선택된 Data가 {param} 아니기때문에 불가능 합니다.",
+        "saveFileFail": "저장에 실패하였습니다.",
+        "textMaxLength": "입력 가능한 글자수는 {param}입니다."
+    },
+    "TABLEID": "TableId",
+    "COLUMNID": "ColumnId",
+    "EVENT": "Event",
+    "VALIDATIONTYPE": "ValidationType",
+    "OPERATOR": "Operator",
+    "DESCRIPTION": "Description",
+    "INPUTQUERY": "InputQuery",
+    "tab": {
+        "overview": "Overview"
+    }
+}

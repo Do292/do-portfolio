@@ -1,0 +1,152 @@
+/* Scss Document */
+@import "breakpoint";
+
+
+/* Small devices (tablets, 300px and up) */
+// @include sm{
+// 	.wrapper.login {
+// 		height: calc(100vh + 0px);
+// 		position: relative;
+// 		margin: 0 auto;
+// 		overflow: auto !important;
+// 	  }
+// 	/*.bg-dark{
+// 		background-color:orange !important
+// 	}*/
+// 	.login-logo > div > img {
+// 		width: 65%;
+// 	}
+// 	.login-form {
+// 		width: 100%;
+// 		height: calc(60vh + 0px);
+// 		min-height:400px;
+// 	}	
+// 	.object {
+// 		height: calc(30vh + 0px);
+// 	}
+// 	.login-form-card {
+// 		margin: 15% 10%;
+// 		position: absolute;
+// 		top: calc(40% - 20px);
+// 		width: 75%;
+// 	}
+// 	.main-footer-login {
+// 		line-height: 1.5;
+// 		font-size: 1em;
+// 		bottom: -70px;
+// 	}
+// }
+// /* Small devices (tablets, 640px and up) */
+// @include sm-re{
+
+// 	.main-footer-login {
+// 		bottom: -370px;
+// 		line-height: 1.5;
+// 		font-size: 1.3em;
+// 	}
+// }
+
+/* Small devices (tablets, 768px and up) */
+// @include md{
+// 	.wrapper.login {
+// 		height: calc(100vh + 0px);
+// 		min-height:768px;
+// 	  }
+// 	/*.bg-dark{
+// 		background-color:blue !important
+// 	}*/
+// 	.login-logo > div > img {
+// 		width: 65%;
+// 	}
+// 	.login-form {
+// 		width: 100%;
+// 		height: calc(50vh + 180px);
+// 		max-height:500px;
+// 	}		
+// 	.object {
+// 		height: calc(50vh + 0px);
+// 	}
+// 	.login-form-card {
+// 		top: calc(50% - 20px);
+// 	}
+// 	.main-footer-login {
+// 		bottom: -370px;
+// 	}
+			
+// }
+// /* Small devices (tablets, 768px and up) */
+// @include md{
+// 	.wrapper.login {
+// 		height: calc(100vh + 0px);
+// 		min-height:768px;
+// 	  }
+// 	/*.bg-dark{
+// 		background-color:blue !important
+// 	}*/
+// 	.login-logo > div > img {
+// 		width: 65%;
+// 	}
+// 	.login-form {
+// 		width: 100%;
+// 		height: calc(50vh + 180px);
+// 		max-height:500px;
+// 	}		
+// 	.object {
+// 		height: calc(50vh + 0px);
+// 	}
+// 	.login-form-card {
+// 		top: calc(50% - 20px);
+// 	}
+// 	.main-footer-login {
+// 		line-height: 1.5;
+// 		font-size: 1.3em;
+// 		bottom: 0;
+// 	}		
+// }
+// /* Small devices (tablets, 992px and up) */
+// @include lg{
+// 	.wrapper.login {
+// 		height: calc(100vh + 0px);
+// 		min-height:768px;
+// 	  }
+// 	/*.bg-dark{
+// 		background-color:maroon !important
+// 	}*/
+// 	.login {
+// 		width: 900px;
+// 		background: #efefef;
+// 	}
+// 	.login-form {
+// 		width: 100%;
+// 		height: calc(50vh + 60px);
+// 		max-height:700px;
+// 	}	
+// 	.login-logo > div > img {
+// 		width: 55%;
+// 	}
+// 	.main-footer-login {
+// 		line-height: 1;
+// 		font-size: 1.3em;
+// 	}		
+// }
+// /* Small devices (tablets, 1280px and up) */
+// @include xl{
+// 	.wrapper.login {
+// 		height: calc(100vh + 0px);
+// 		min-height:768px;
+// 	  }
+// 	/*.bg-dark{
+// 		background-color:green !important
+// 	}*/
+	
+// 	.login {
+// 		width: 900px;
+// 		background: #efefef;
+// 	}
+// 	.main-footer-login {
+// 		line-height: 1;
+// 		font-size: 1.3em;
+// 	}	
+// }
+
+		

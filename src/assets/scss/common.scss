@@ -1,0 +1,75 @@
+@import "./default.scss";
+
+:root {
+  --c-white: #ffffff;
+  --c-dark: #1a1a1a;
+  --c-dark-2: #242424;
+  --c-black: #000000;
+  --c-green: #42b883;
+  --c-blue: #2164e1;
+  --c-grey: #fafafa;
+  --c-grey-2: #d9d9d9;
+
+  --font-weight-bold: 500;
+
+  --bg-blue: var(--c-blue);
+  --bg-grey: var(--c-grey);
+
+  --border-color-bright: 1px solid #0000001a;
+  --border-color-dark: 1px solid rgba(84, 84, 84, 0.65);
+  --border-color-blue: 1px solid #2164e1;
+  --border-color-green: 1px solid #42b883;
+  --border-radius-root: 0.25rem;
+
+  --box-shadow-root: 0 1px 4px rgb(0 0 0 / 10%), 0 2px 6px rgb(0 0 0 / 10%);
+  --box-shadow-hover-root: 0 2px 4px rgb(0 0 0 / 15%),
+    0 3px 9px rgb(0 0 0 / 15%);
+}
+
+:root[data-theme="light"] {
+  --bg-color: var(--c-white);
+  --bg-color-2: var(--bg-grey);
+  --font-color: var(--c-black);
+  --font-color-2: var(--c-black);
+  --font-reverse: var(--c-white);
+
+  --border: var(--border-color-bright);
+  --border-radius: var(--border-radius-root);
+
+  --input-bg: var(--c-white);
+  --input-c: var(--c-black);
+  --input-focus: var(--c-blue);
+
+  --font-weight-b: var(--font-weight-bold);
+
+  --btn-bg: var(--bg-blue);
+  --btn-c: var(--c-white);
+  --btn-border: var(--border-color-blue);
+
+  --box-shadow: var(--box-shadow-root);
+  --box-shadow-hover: var(--box-shadow-hover-root);
+}
+
+:root[data-theme="dark"] {
+  --bg-color: var(--c-dark);
+  --bg-color-2: var(--c-dark-2);
+  --font-color: var(--c-white);
+  --font-color-2: var(--c-grey-2);
+
+  --border: var(--border-color-dark);
+  --border-radius: var(--border-radius-root);
+
+  --input-bg: var(--c-dark-2);
+  --input-c: var(--c-white);
+  --input-focus: var(--c-green);
+
+  --font-weight-b: var(--font-weight-bold);
+
+  --btn-bg: var(--c-green);
+  --btn-c: var(--c-white);
+  --btn-border: var(--border-color-green);
+
+  --box-shadow: var(--box-shadow-root);
+  --box-shadow-hover: var(--box-shadow-hover-root);
+}
+

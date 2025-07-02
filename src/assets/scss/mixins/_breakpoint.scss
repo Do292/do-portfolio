@@ -1,0 +1,48 @@
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 300px;
+// Small tablets (portrait reverse view)
+$screen-sm-re: 640px;
+// Small tablets (portrait view)
+// Small tablets (portrait view)
+$screen-md-s-min: 1024px;
+
+$screen-md-min: 1200px;
+
+$screen-md-max: 1200px;
+// Tablets and small desktops
+$screen-lg-min: 1480px;
+
+// Large tablets and desktops
+$screen-xl-min: 1690px;
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Sass Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) { 
+
+}
+@media (min-width: $screen-sm-re) { 
+
+}
+/* Medium devices (desktops, 640px and up) */
+@media (min-width: $screen-md-s-min) { 
+
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) { 
+
+}
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: $screen-md-min) { 
+
+}
+
+/* Large devices (large desktops, 1280px and up) */
+@media (min-width: $screen-lg-min) { 
+
+}
+/* Desktop ( 1280px and up) */
+@media (min-width: $screen-xl-min) { 
+
+}

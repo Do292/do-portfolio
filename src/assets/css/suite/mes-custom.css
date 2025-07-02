@@ -1,0 +1,39 @@
+/*
+    [목차]
+    1. FormOrder
+    2. edit-accordion
+*/
+
+/* #region 1. FormOrder */
+.form-header {
+    padding-left: 20px !important;
+}
+.form-left {
+    height: calc(100vh - 185px);
+}
+.form-left .form-panel {
+    float: left;
+    margin-left: 30px;
+}
+/* #endregion */
+
+/* #region 2. edit-accordion*/
+.form-body .d-table-cell {
+    padding: 5px 2px !important;
+    font-size: 0.9rem !important;
+}
+.form-body .e-label {
+    font-size: 0.9rem !important;
+}
+.table-item > .d-table-row.required > .d-table-cell.field::after {
+    font-size: 0.75rem !important
+}
+.input-field-box >span,
+.input-field-box >div>span,
+.input-field-box .e-control-wrapper label {
+    font-size: 0.9rem !important;
+    color: black !important
+}
+
+
+/* #endregion */
